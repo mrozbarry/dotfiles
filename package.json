@@ -1,0 +1,27 @@
+{
+  "name": "dotfiles",
+  "version": "0.0.1",
+  "description": "MrOzBarry's Dotfile Config",
+  "scripts": {
+    "postinstall": "./node_modules/.bin/babel-node ./install.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrozbarry/dotfiles.git"
+  },
+  "author": "Alex Barry",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrozbarry/dotfiles/issues"
+  },
+  "homepage": "https://github.com/mrozbarry/dotfiles#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-es2017": "^6.24.1",
+    "enquirer": "^1.0.2",
+    "prompt-checkbox": "^2.2.0",
+    "prompt-confirm": "^1.2.0",
+    "prompt-radio": "^1.2.1"
+  }
+}

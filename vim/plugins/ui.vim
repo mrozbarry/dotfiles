@@ -1,0 +1,6 @@
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'Shougo/neocomplete'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'skwp/YankRing.vim'
+Plugin 'tpope/vim-repeat'
+Plugin 'powerline/powerline'
