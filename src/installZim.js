@@ -165,7 +165,7 @@ zmodules=(${zimModules.join(" ")})
 
 # Module Settings
 
-zprompt_theme="minimal"
+zprompt_theme="eriner"
 
 # Environment
 
