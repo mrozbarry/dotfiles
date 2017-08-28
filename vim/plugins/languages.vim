@@ -1,3 +1,5 @@
 Plugin 'scrooloose/syntastic'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'vim-scripts/Javascript-Indent'
+Plugin 'tpope/vim-markdown'
+Plugin 'elzr/vim-json'
