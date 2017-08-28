@@ -1,2 +1,3 @@
 Plugin 'scrooloose/syntastic'
-Plugin 'pangloss/vim-javascript'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'vim-scripts/Javascript-Indent'
