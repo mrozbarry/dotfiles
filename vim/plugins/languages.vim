@@ -1,7 +1,2 @@
-Plugin 'pangloss/vim-javacript'
-Plugin 'othree/javascript-libraries-syntax.vim'
-Plugin 'wavded/vim-stylus'
-Plugin 'chemzqm/vim-jsx-improve'
-Plugin 'skwp/vim-html-escape'
-Plugin 'ElmCast/elm-vim'
 Plugin 'scrooloose/syntastic'
+Plugin 'pangloss/vim-javascript'

@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "MrOzBarry's Dotfile Config",
   "scripts": {
-    "postinstall": "./node_modules/.bin/babel-node ./install.js"
+    "postinstall": "./node_modules/.bin/babel-node ./src/index.js"
   },
   "repository": {
     "type": "git",

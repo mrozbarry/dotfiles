@@ -1,6 +1,8 @@
 import fs from "fs"
 import path from "path"
-import { exec } from "child_process"
+import exec from "../helpers/execPromise.js"
+import symbolicLink from "../helpers/symbolicLink.js"
+
 
 const availableModules = [
 	"completion",
@@ -18,6 +20,7 @@ const availableModules = [
 	"utility"
 ]
 
+
 const recommendedModules = [
 	"completion",
 	"directory",
@@ -27,6 +30,7 @@ const recommendedModules = [
 	"git",
 	"utility"
 ]
+
 
 export default (prompt, homePath) => {
 	return prompt
@@ -76,21 +80,7 @@ export function installZim (homePath, { installPath, zimModules }) {
 	const initialPromise =
 		fs.existsSync(zimPath) ?
 		Promise.resolve() :
-		new Promise((resolve, reject) => {
-			const execString = `git clone --recursive https://github.com/Eriner/zim.git ${zimPath}`
-
-			exec(execString, (err, stdout, stderr) => {
-				console.log(stdout)
-
-				if (err) {
-					console.error(err)
-					reject(err)
-					return
-				}
-				resolve()
-			})
-
-		})
+		exec(execString)
 
 	return initialPromise
 		.then(() => {
@@ -109,52 +99,10 @@ export function installZim (homePath, { installPath, zimModules }) {
 
 
 function linkZimTemplateZlogin (homePath, zimPath) {
+	const zloginTemplate = path.resolve(zimPath, "templates", "zlogin")
 	const zloginPath = path.resolve(homePath, ".zlogin")
 
-	const initialPromise =
-		fs.existsSync(zloginPath) ?
-		(new Promise((resolve, reject) => {
-			const date = (new Date()).toISOString().split("T")[0]
-			const backup = `zlogin-backup-${date}`
-			const oldZlogin = path.resolve(homePath, backup)
-
-			if (fs.existsSync(oldZlogin)) {
-				console.log(" * There was already a backup today, removing previous backup.")
-				fs.unlinkSync(oldZlogin)
-			}
-
-			console.log(` * Backing up old zlogin file to ${oldZlogin}`)
-
-			fs.rename(zloginPath, oldZlogin, (err) => {
-				if (err) {
-					reject(err)
-					return
-				}
-				resolve()
-			})
-		})) :
-		Promise.resolve()
-
-	return initialPromise
-		.then(() => new Promise((resolve, reject) => {
-			const zloginTemplate = path.resolve(zimPath, "templates", "zlogin")
-			const execString =  `ln -s ${zloginTemplate} ${zloginPath}`
-			exec(execString, (err, stdout, stderr) => {
-				console.log(stdout)
-				if (err) {
-					console.error(stderr)
-					reject(err)
-					return
-				}
-				resolve()
-			})
-
-		}))
-		.catch((err) => {
-			console.log(" * Unable to link zlogin!")
-			console.dir(err)
-
-		})
+	return symbolicLink(zloginTemplate, zloginPath)
 }
 
 
