@@ -1,7 +1,5 @@
-# Git aliases
-
-alias gs='git status -s'
-alias gco='git checkout'
 git config --global alias.cob 'checkout -b'
+alias gs='git status'
+alias gco='git checkout'
 alias gpl='git pull'
 alias gd='git diff'
