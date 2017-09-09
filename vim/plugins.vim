@@ -1,7 +1,8 @@
 set nocompatible
 filetype off
+
 set rtp+=~/.dotfiles/vim/bundle/Vundle.vim
-call vundle#begin()
+call vundle#begin('~/.dotfiles/vim/bundles')
 
 Plugin 'VundleVim/Vundle.vim'
 
