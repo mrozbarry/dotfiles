@@ -1,1 +1,1 @@
-Plugin 'ervandew/ag'
+Plugin 'mileszs/ack.vim'
