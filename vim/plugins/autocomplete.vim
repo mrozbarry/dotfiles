@@ -1,1 +1,2 @@
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'Shougo/deoplete.nvim'
+Plugin 'carlitux/deoplete-ternjs'
