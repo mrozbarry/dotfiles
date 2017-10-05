@@ -1,4 +1,5 @@
 git config --global alias.cob 'checkout -b'
+alias ga='git add'
 alias gs='git status'
 alias gco='git checkout'
 alias gpl='git pull'
