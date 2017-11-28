@@ -1,6 +1,6 @@
 import fs from "fs"
 import path from "path"
-import exec from "../helpers/execPromise.js"
+import spawn from "../helpers/spawn.js"
 import symbolicLink from "../helpers/symbolicLink.js"
 
 
@@ -16,6 +16,7 @@ const availableModules = [
 	"syntax-highlighting",
 	"archive",
 	"git",
+  "git-info",
 	"ssh",
 	"utility"
 ]
@@ -28,6 +29,7 @@ const recommendedModules = [
 	"prompt",
 	"syntax-highlighting",
 	"git",
+  "git-info",
 	"utility"
 ]
 
@@ -80,7 +82,7 @@ export function installZim (homePath, { installPath, zimModules }) {
 	const initialPromise =
 		fs.existsSync(zimPath) ?
 		Promise.resolve() :
-		exec(execString)
+		spawn(execString)
 
 	return initialPromise
 		.then(() => {

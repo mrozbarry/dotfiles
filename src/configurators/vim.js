@@ -1,6 +1,6 @@
 import fs from "fs"
 import path from "path"
-import exec from "../helpers/execPromise.js"
+import spawn from "../helpers/spawn.js"
 import symbolicLink from "../helpers/symbolicLink.js"
 
 
@@ -69,5 +69,5 @@ function confirmConfiguration (prompt, response, allEditors) {
 
 
 function installPlugins () {
-	return exec("vim +PluginInstall +qall")
+	return spawn("vim +PlugInstall +PlugClean +UpdateRemotePlugins +qall")
 }

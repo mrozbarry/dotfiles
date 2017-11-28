@@ -1,16 +1,10 @@
-set nocompatible
-filetype off
-
-set rtp+=~/.dotfiles/vim/bundle/Vundle.vim
-call vundle#begin('~/.dotfiles/vim/bundles')
-
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin('~/.dotfiles/vim/plugged')
 
 for f in split(glob('~/.dotfiles/vim/plugins/*.vim'), '\n')
   exe 'source' f
 endfor
 
-call vundle#end()
+call plug#end()
 
 filetype plugin indent on
 filetype on

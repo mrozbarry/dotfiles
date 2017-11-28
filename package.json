@@ -18,7 +18,7 @@
   "homepage": "https://github.com/mrozbarry/dotfiles#readme",
   "dependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.0",
+    "babel-preset-env": "^1.6.1",
     "babel-preset-es2017": "^6.24.1",
     "enquirer": "^1.0.2",
     "prompt-checkbox": "^2.2.0",

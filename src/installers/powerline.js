@@ -1,6 +1,6 @@
 import fs from "fs"
 import path from "path"
-import exec from "../helpers/execPromise"
+import spawn from "../helpers/spawn"
 
 export default (prompt) => {
 	return prompt
@@ -25,7 +25,7 @@ function installPowerlineFonts () {
 	const target = `/tmp/powerline-fonts`
 	console.log("Installing powerline fonts from git...")
 	console.log(" * Cloning")
-	return exec(`git clone https://github.com/powerline/fonts.git ${target}`)
+	return spawn("git", ["clone", "--depth 1", "https://github.com/powerline/fonts.git", target])
 		.then(() => {
 			console.log(" * Running install script (may ask for root)")
 			return exec(`./install.sh`, target)

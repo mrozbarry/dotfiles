@@ -1,10 +1,22 @@
 import path from "path"
 import fs from "fs"
-import exec from "./execPromise.js"
+import spawn from "./spawn.js"
 
 export default (sourceFile, linkTarget) => {
-	const initialPromise =
-		fs.existsSync(linkTarget) ?
+
+	return backupOldFile(linkTarget)
+		.then(() => new Promise((resolve, reject) => {
+			return spawn("ln", ["-sf", sourceFile, linkTarget])
+		}))
+		.catch((err) => {
+			console.log(` * Unable to link ${linkTarget}!`)
+			console.dir(err)
+
+		})
+}
+
+function backupOldFile(linkTarget) {
+	return fs.existsSync(linkTarget) ?
 		(new Promise((resolve, reject) => {
 			const date = (new Date()).toISOString().split("T")[0]
 			const oldFile = `${linkTarget}-backup-${date}`
@@ -25,16 +37,4 @@ export default (sourceFile, linkTarget) => {
 			})
 		})) :
 		Promise.resolve()
-
-	return initialPromise
-		.then(() => new Promise((resolve, reject) => {
-			const execString =  `ln -s ${sourceFile} ${linkTarget}`
-			return exec(execString)
-
-		}))
-		.catch((err) => {
-			console.log(` * Unable to link ${linkTarget}!`)
-			console.dir(err)
-
-		})
 }

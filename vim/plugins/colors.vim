@@ -1,1 +1,1 @@
-Plugin 'chrisbra/color_highlight'
+Plug 'chrisbra/color_highlight'

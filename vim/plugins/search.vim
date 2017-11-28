@@ -1,1 +1,1 @@
-Plugin 'mileszs/ack.vim'
+Plug 'mileszs/ack.vim'
