@@ -1,7 +1,4 @@
 " Solarized
-
-" set termguicolors
-" set notermguicolors
 set background=dark
 colorscheme solarized
 let g:solarized_termcolors=256
