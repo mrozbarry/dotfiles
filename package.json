@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "MrOzBarry's Dotfile Config",
   "scripts": {
+    "preinstall": "(curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash) && source ~/.zshrc && nvm install && nvm use",
     "postinstall": "./node_modules/.bin/babel-node ./src/index.js",
     "up": "git pull origin master && git submodule update --init --recursive"
   },
