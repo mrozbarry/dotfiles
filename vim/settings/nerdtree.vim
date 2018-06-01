@@ -2,6 +2,7 @@ let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let NERDTreeQuitOnOpen = 1
 let g:NERDTreeWinSize = 40
+let NERDTreeShowHidden = 1
 
 noremap <silent> <Leader>d :let NERDTreeQuitOnOpen = 1<bar>NERDTreeToggle<CR>
 
@@ -24,3 +25,9 @@ noremap <silent> <Leader>d :let NERDTreeQuitOnOpen = 1<bar>NERDTreeToggle<CR>
 " call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
 " call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
 " call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
+
+" Mitigate syntax highlighting lag
+let g:NERDTreeSyntaxDisableDefaultExtensions = 1
+let g:NERDTreeDisableExactMatchHighlight = 1
+let g:NERDTreeDisablePatternMatchHighlight = 1
+let g:NERDTreeSyntaxEnableExtensions = ['js', 'css', 'sass', 'scss', 'styl', 'yml', 'rb', 'json', 'graphql']

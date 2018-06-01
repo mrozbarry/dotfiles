@@ -9,3 +9,5 @@ else
   Plug 'altercation/vim-colors-solarized'
 endif
 "Plugin 'Yggdroot/indentLine'
+
+Plug 'ryanoasis/vim-devicons'

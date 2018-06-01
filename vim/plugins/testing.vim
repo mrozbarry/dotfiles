@@ -1,0 +1,1 @@
+Plug 'retorillo/istanbul.vim'
