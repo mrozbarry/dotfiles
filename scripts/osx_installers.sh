@@ -7,5 +7,4 @@ if [ -x "$(command -v brew)" ]; then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-brew update
-brew install neovim python3 zsh zsh-completions the_silver_searcher
+brew install neovim python3 zsh zsh-completions the_silver_searcher fzf fd

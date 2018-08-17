@@ -12,4 +12,5 @@ Plug 'wavded/vim-stylus', { 'for': 'stylus' }
 
 Plug 'jparise/vim-graphql'
 
-Plug 'StanAngeloff/php.vim', { 'for': 'php' }
+Plug 'StanAngeloff/php.vim'
+Plug '2072/PHP-Indenting-for-VIm'
