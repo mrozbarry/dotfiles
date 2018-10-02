@@ -1,4 +1,5 @@
 git config --global alias.cob 'checkout -b'
+git config --global branch.develop.mergeoptions '--no-ff'
 alias ga='git add'
 alias gs='git status'
 alias gco='git checkout'
