@@ -9,8 +9,3 @@ Plug 'elzr/vim-json', { 'for': ['javascript', 'json'] }
 Plug 'othree/html5.vim', { 'for': 'html' }
 
 Plug 'wavded/vim-stylus', { 'for': 'stylus' }
-
-Plug 'jparise/vim-graphql'
-
-Plug 'StanAngeloff/php.vim'
-Plug '2072/PHP-Indenting-for-VIm'
