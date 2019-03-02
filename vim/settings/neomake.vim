@@ -1,9 +1,13 @@
-let g:neomake_javascript_enabled_makers = ['eslint']
-let g:neomake_javascript_eslint_exe = system('PATH=$(npm bin):$PATH && which eslint | tr -d "\n"')
+if executable('eslint')
+  set statusline+=\ %#ErrorMsg#%{neomake#statusline#QflistStatus('qf:\ ')}
 
-call neomake#configure#automake('nrwi', 500)
+  let g:neomake_javascript_eslint_exe = $PWD .'/node_modules/.bin/eslint'
+  let g:neomake_javascript_enabled_makers = ['eslint']
 
-" Go to current eslint error
-nmap <Leader><Space>, :ll<CR>
+  call neomake#configure#automake('wi')
 
-autocmd! BufWritePost * Neomake
+  " Go to current eslint error
+  nmap <Leader><Space>, :ll<CR>
+
+  autocmd! BufWritePost * Neomake
+endif
