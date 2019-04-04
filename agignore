@@ -1,0 +1,4 @@
+dist
+**/__snapshots__
+*.js.snap
+node_modules
