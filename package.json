@@ -3,8 +3,7 @@
   "version": "0.0.1",
   "description": "MrOzBarry's Dotfile Config",
   "scripts": {
-    "preinstall": "(curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash) && source ~/.zshrc && nvm install && nvm use",
-    "postinstall": "./node_modules/.bin/babel-node ./src/index.js",
+    "#postinstall": "./node_modules/.bin/babel-node ./src/index.js",
     "up": "git pull origin master && git submodule update --init --recursive"
   },
   "repository": {
@@ -18,12 +17,15 @@
   },
   "homepage": "https://github.com/mrozbarry/dotfiles#readme",
   "dependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-es2017": "^6.24.1",
     "enquirer": "^1.0.2",
     "prompt-checkbox": "^2.2.0",
     "prompt-confirm": "^1.2.0",
     "prompt-radio": "^1.2.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.3"
   }
 }
