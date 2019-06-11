@@ -9,3 +9,5 @@ Plug 'elzr/vim-json', { 'for': ['javascript', 'json'] }
 Plug 'othree/html5.vim', { 'for': 'html' }
 
 Plug 'wavded/vim-stylus', { 'for': 'stylus' }
+
+Plug 'rust-lang/rust.vim'
