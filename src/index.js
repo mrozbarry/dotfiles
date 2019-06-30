@@ -15,7 +15,6 @@ const modules = {
 	"Configure vim": (prompt) => configureVim(prompt, HOME_DIRECTORY)
 }
 
-
 prompt
 	.ask({
 		name: "installPath",

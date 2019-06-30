@@ -19,4 +19,6 @@ SAVEHIST=1000
 setopt autocd
 bindkey -e
 
-for config_file ($HOME/.dotfiles/zsh/settings/*.zsh) source $config_file
+for config_file ($HOME/.dotfiles/zsh/settings/*.zsh); do
+  source $config_file
+done

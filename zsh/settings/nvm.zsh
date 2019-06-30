@@ -1,8 +1,8 @@
 # Temporary
-unset npm_config_prefix
+# unset npm_config_prefix
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" --no-use
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 autoload -U add-zsh-hook
@@ -25,4 +25,3 @@ nvm_use_after_cd() {
 
 
 add-zsh-hook chpwd nvm_use_after_cd
-nvm_use_after_cd

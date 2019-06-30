@@ -19,3 +19,6 @@ endif
 if (has("termguicolors"))
   set termguicolors
 endif
+
+set exrc
+set secure
