@@ -36,6 +36,6 @@ function installPowerlineFonts () {
 		})
 		.catch((err) => {
 			console.log("Unable to install powerline fonts.")
-			console.dir(err)
+			console.error(err)
 		})
 }

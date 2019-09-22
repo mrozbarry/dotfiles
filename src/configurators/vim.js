@@ -4,7 +4,7 @@ import spawn from "../helpers/spawn.js"
 import symbolicLink from "../helpers/symbolicLink.js"
 
 
-export default (prompt, homePath) => {
+export default homePath => (prompt) => {
 	const editors = supportedEditors(homePath)
 
 	return prompt

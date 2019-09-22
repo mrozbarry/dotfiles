@@ -6,13 +6,12 @@ import configureZim from "./configurators/zim.js"
 import configureVim from "./configurators/vim.js"
 import installPowerline from "./installers/powerline.js"
 
-const { platform } = process
-const HOME_DIRECTORY = process.env[platform == "win32" ? "USERPROFILE" : "HOME"]
+const HOME_DIRECTORY = process.env.HOME;
 
 const modules = {
 	"Install Powerline Fonts": installPowerline,
-	"Configure zim": (prompt) => configureZim(prompt, HOME_DIRECTORY),
-	"Configure vim": (prompt) => configureVim(prompt, HOME_DIRECTORY)
+	"Configure zim": configureZim(HOME_DIRECTORY),
+	"Configure vim": configureVim(HOME_DIRECTORY)
 }
 
 prompt
@@ -21,10 +20,7 @@ prompt
 		message: "Install path",
 		default: path.resolve(HOME_DIRECTORY, ".dotfiles")
 	})
-	.then((response) => {
-		return askWhatToInstall(prompt)
-
-	})
+	.then(() => askWhatToInstall(prompt))
 	.then((response) => {
 		return response.whatToInstall.reduce((chain, moduleKey) => {
 			return chain.then(() => {

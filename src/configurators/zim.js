@@ -34,7 +34,7 @@ const recommendedModules = [
 ]
 
 
-export default (prompt, homePath) => {
+export default homePath => prompt => {
 	return prompt
 		.ask({
 			name: "zimModules",

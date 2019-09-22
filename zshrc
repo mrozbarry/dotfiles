@@ -1,7 +1,7 @@
 # Custom zsh configuration
 
 zstyle ':completion:*' completer _expand _complete _ignored
-zstyle :compinstall filename '/home/alex/.zshrc'
+zstyle :compinstall filename '$HOME/.zshrc'
 
 autoload -Uz compinit
 compinit
