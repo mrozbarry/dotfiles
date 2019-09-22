@@ -3,5 +3,5 @@
 # export PATH="/usr/local/opt/php@7.1/sbin:$PATH"
 
 # For homebrew formula php@7.2
-echo 'export PATH="/usr/local/opt/php@7.2/bin:$PATH"' >> ~/.zshrc
-echo 'export PATH="/usr/local/opt/php@7.2/sbin:$PATH"' >> ~/.zshrc
+# export PATH="/usr/local/opt/php@7.2/bin:$PATH"
+# export PATH="/usr/local/opt/php@7.2/sbin:$PATH"
