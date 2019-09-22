@@ -1,1 +1,1 @@
-Plug 'MarcWeber/vim-addon-local-vimrc'
+" Plug 'MarcWeber/vim-addon-local-vimrc'
