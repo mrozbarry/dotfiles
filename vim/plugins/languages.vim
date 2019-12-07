@@ -1,14 +1,21 @@
 Plug 'w0rp/ale'
 
-"Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
 Plug 'mxw/vim-jsx', { 'for': 'javascript' }
-Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
+Plug 'posva/vim-vue', { 'for': 'javascript' }
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 
-Plug 'tpope/vim-markdown'
+
+Plug 'tpope/vim-markdown', { 'for': 'markdown' }
+
 Plug 'elzr/vim-json', { 'for': ['javascript', 'json'] }
+
 Plug 'othree/html5.vim', { 'for': 'html' }
 
-" Plug 'wavded/vim-stylus', { 'for': 'stylus' }
+Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 
-Plug 'rust-lang/rust.vim'
+Plug 'StanAngeloff/php.vim', { 'for': 'php' }
+Plug 'stephpy/vim-php-cs-fixer', { 'for': 'php' }
+Plug 'phpactor/phpactor', { 'for': 'php', 'do': 'composer install' }
+Plug 'adoy/vim-php-refactoring-toolbox', { 'for': 'php' }
