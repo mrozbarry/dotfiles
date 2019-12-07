@@ -1,12 +1,12 @@
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-else
-  Plug 'Shougo/deoplete.nvim'
-endif
-Plug 'carlitux/deoplete-ternjs', {'for': 'javascript'}
-Plug 'kristijanhusak/deoplete-phpactor', {'for': 'php'}
+"if has('nvim')
+  "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  "Plug 'roxma/nvim-yarp'
+  "Plug 'roxma/vim-hug-neovim-rpc'
+"else
+  "Plug 'Shougo/deoplete.nvim'
+"endif
+"Plug 'carlitux/deoplete-ternjs', {'for': 'javascript'}
+"Plug 'kristijanhusak/deoplete-phpactor', {'for': 'php'}
 
 " Plug 'ncm2/ncm2'
 "if !has('nvim')
@@ -23,3 +23,5 @@ Plug 'kristijanhusak/deoplete-phpactor', {'for': 'php'}
 " Plug 'artur-shaik/vim-javacomplete2', {'for': ['java', 'jsp']}
 "Plug 'ncm2/ncm2-markdown-subscope', {'for': 'markdown'}
 "Plug 'phpactor/ncm2-phpactor', {'for': 'php'}
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}

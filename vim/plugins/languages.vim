@@ -3,6 +3,9 @@ Plug 'w0rp/ale'
 Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
 Plug 'mxw/vim-jsx', { 'for': 'javascript' }
 Plug 'posva/vim-vue', { 'for': 'javascript' }
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
+
 
 Plug 'tpope/vim-markdown', { 'for': 'markdown' }
 

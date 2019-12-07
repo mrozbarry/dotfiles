@@ -7,3 +7,4 @@
 # export PATH="/usr/local/opt/php@7.2/sbin:$PATH"
 
 export PATH="./vendor/bin:$PATH"
+export PATH="$HOME/.composer/vendor/bin:$PATH"
