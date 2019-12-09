@@ -1,23 +1,34 @@
 # Dotfiles
 
-Zim + Customizations
-
-
-# Prereqs
-
- - nvm
- - rvm
- - git
- - zsh (and set as default shell)
+My dotfiles for vim, zsh, and tmux.
+Also uses [zim](https://github.com/zimfw/zimfw).
 
 # Install
 
+## Legwork
+
  - `git clone git@github.com:mrozbarry/dotfiles.git ~/.dotfiles`
  - `cd .dotfiles`
- - `./scripts/osx_installers.js` to install homebrew and things
- - `./scripts/shared_installers.sh` to get rvm (ruby version manager) and nvm (node version manager)
- - `ln -sf ./zshrc ~/.zshrc`
- - `ln -sf ./vimrc ~/.vimrc` (for vim)
- - `ln -sf ./vimrc ~/.config/nvim/init.vim` (for neovim)
- - `nvim +UpdateRemotePlugins +PlugUpdate +PlugUpgrade +PlugClean +qall` to install vim plugins and updates
+ - `./install.sh` to install required packages and things
 
+## Load the zsh stuff
+
+Open up your `~/.zshrc` file, and add this to the bottom:
+
+```zsh
+# ...maybe other stuff
+
+source ~/.dotfiles/zshrc
+```
+
+## Update it later
+
+Update my dotfiles stuff
+
+```zsh
+$ updot
+```
+
+## Customization
+
+I don't support it, but there wouldn't be a lot of effort required to load up custom `.vim` and `.zsh` files.

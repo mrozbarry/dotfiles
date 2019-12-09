@@ -13,7 +13,7 @@ install_osx() {
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
   brew update
-  brew install fzf python
+  brew install fzf python git
 
   # -----------------------------------------
 
@@ -29,6 +29,15 @@ install_osx() {
   nvm use --lts
 }
 
+install_zsh() {
+  git clone --recursive https://github.com/zimfw/zimfw.git ${ZDOTDIR:-${HOME}}/.zim
+  ln -s ${ZDOTDIR:-${HOME}}/.zim/templates/zimrc ~/.zimrc
+}
+
+install_tmux() {
+  ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
+}
+
 install_neovim() {
   (pip3 install --user pynvim || pip install --user pynvim)
   npm i -g neovim
@@ -36,10 +45,12 @@ install_neovim() {
   rm -f ~/.config/nvim/init.vim
   ln -s ./vimrc ~/.config/nvim/init.vim
 
-  nvim +UpdateRemotePlugins +PlugInstall +PlugUpdate +PlugClean +qall
+  nvim +UpdateRemotePlugins +PlugUpgrade +PlugInstall +PlugUpdate +PlugClean +qall
 }
 
 install_osx
+install_zsh
+install_tmux
 install_neovim
 
 echo ""
