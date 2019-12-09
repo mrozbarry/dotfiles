@@ -1,6 +1,4 @@
 " Some servers have issues with backup files, see #649
-set nobackup
-set nowritebackup
 
 " Better display for messages
 set cmdheight=2
@@ -43,4 +41,4 @@ command! -nargs=0 Format :call CocAction('format')
 
 command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+"set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
