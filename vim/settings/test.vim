@@ -1,2 +1,4 @@
 let test#strategy = "neovim"
-let test#enabled_runners = ["javascript#jest", "javascript#mocha", "javascript#ava"]
+let test#neovim#term_position = "belowright"
+let test#javascript#ava#options = "--fail-fast -s"
+let g:test#javascript#ava#file_pattern = '.*\.test\.js'
