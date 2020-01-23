@@ -1,2 +1,5 @@
 export EDITOR=nvim
-source ~/.zim/init.zsh
+
+if [[ -f ~/.zim/init.zsh ]]; then
+  source ~/.zim/init.zsh
+fi
