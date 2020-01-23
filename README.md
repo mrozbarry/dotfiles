@@ -9,7 +9,7 @@ Also uses [zim](https://github.com/zimfw/zimfw).
 
  - `git clone git@github.com:mrozbarry/dotfiles.git ~/.dotfiles`
  - `cd .dotfiles`
- - `./install.sh` to install required packages and things
+ - `./install.sh` to install required packages and things. Supports `--mac` for installing homebrew+tools, and `--zim` for installing [zim](https://github.com/zimfw/zimfw).
 
 ## Load the zsh stuff
 
