@@ -10,4 +10,5 @@ set cursorline
 
 let g:airline_theme='one'
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#ale#enabled = 1
+"let g:airline_statusline_ontop=1
+let g:airline_extensions = []
