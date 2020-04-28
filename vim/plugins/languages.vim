@@ -12,6 +12,7 @@ Plug 'tpope/vim-markdown', { 'for': 'markdown' }
 Plug 'elzr/vim-json', { 'for': ['javascript', 'json'] }
 
 Plug 'othree/html5.vim', { 'for': 'html' }
+Plug 'alvan/vim-closetag', { 'for': ['html', 'js'] }
 
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 
