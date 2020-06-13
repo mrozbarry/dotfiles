@@ -8,3 +8,4 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 
 nvm install --lts --latest-npm
 nvm use --lts
+nvm alias default lts/*

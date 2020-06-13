@@ -6,3 +6,4 @@ if [ $ALREADY_SOURCED -eq 0 ]; then
   echo "source ~/.dotfiles/zshrc" >> ~/.zshrc
 fi
 
+
