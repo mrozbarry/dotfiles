@@ -1,4 +1,5 @@
 node_modules
 vim/plugged
 vim/plug.vim.old
+tmux/plugins/tpm
 
