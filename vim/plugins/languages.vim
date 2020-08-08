@@ -6,6 +6,8 @@ Plug 'posva/vim-vue', { 'for': 'javascript' }
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 
+Plug 'dart-lang/dart-vim-plugin'
+Plug 'thosakwe/vim-flutter'
 
 Plug 'tpope/vim-markdown', { 'for': 'markdown' }
 

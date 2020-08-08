@@ -25,3 +25,5 @@
 "Plug 'phpactor/ncm2-phpactor', {'for': 'php'}
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'natebosch/vim-lsc'
+Plug 'natebosch/vim-lsc-dart'
