@@ -20,6 +20,14 @@ do
               source $install_script
             done
             ;;
+        --arch)
+            echo ""
+            echo "=== Installing ArchLinux tools ==="
+            echo ""
+            for install_script in $HOME/.dotfiles/system/install/*.sh.arch; do
+              source $install_script
+            done
+            ;;
         --zim)
             echo ""
             echo "=== Installing ZIM zsh extensions ==="
