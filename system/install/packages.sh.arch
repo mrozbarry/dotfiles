@@ -4,4 +4,4 @@ git clone https://aur.archlinux.org/yay.git /tmp/aur-yay-package
 cd /tmp/aur-yay-package
 makepkg -si
 
-yay -S i3-wm polybar rofi siji dunst
+yay -S i3-wm polybar rofi siji dunst neovim fzf ripgrep bat

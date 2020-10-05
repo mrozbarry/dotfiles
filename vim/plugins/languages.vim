@@ -4,7 +4,7 @@ Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
 Plug 'mxw/vim-jsx', { 'for': 'javascript' }
 Plug 'posva/vim-vue', { 'for': 'javascript' }
 Plug 'HerringtonDarkholme/yats.vim'
-Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
+" Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'thosakwe/vim-flutter'

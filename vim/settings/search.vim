@@ -2,20 +2,45 @@
 
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
+  let grepprg = 'ag\ --nogroup\ --nocolor'
 endif
 
-autocmd FileType denite call s:denite_my_settings()
-function! s:denite_my_settings() abort
-  nnoremap <silent><buffer><expr> <CR>
-  \ denite#do_map('do_action')
-  nnoremap <silent><buffer><expr> d
-  \ denite#do_map('do_action', 'delete')
-  nnoremap <silent><buffer><expr> p
-  \ denite#do_map('do_action', 'preview')
-  nnoremap <silent><buffer><expr> q
-  \ denite#do_map('quit')
-  nnoremap <silent><buffer><expr> i
-  \ denite#do_map('open_filter_buffer')
-  nnoremap <silent><buffer><expr> <Space>
-  \ denite#do_map('toggle_select').'j'
-endfunction
+try
+  " Custom options for Denite
+  "   auto_resize             - Auto resize the Denite window height automatically.
+  "   prompt                  - Customize denite prompt
+  "   direction               - Specify Denite window direction as directly below current pane
+  "   winminheight            - Specify min height for Denite window
+  "   highlight_mode_insert   - Specify h1-CursorLine in insert mode
+  "   prompt_highlight        - Specify color of prompt
+  "   highlight_matched_char  - Matched characters highlight
+  "   highlight_matched_range - matched range highlight
+  let s:denite_options = {'default' : {
+  \ 'split': 'floating',
+  \ 'start_filter': 1,
+  \ 'auto_resize': 1,
+  \ 'source_names': 'short',
+  \ 'prompt': '-> ',
+  \ 'highlight_matched_char': 'QuickFixLine',
+  \ 'highlight_matched_range': 'Visual',
+  \ 'highlight_window_background': 'Visual',
+  \ 'highlight_filter_background': 'DiffAdd',
+  \ 'winrow': 1,
+  \ 'vertical_preview': 1
+  \ }}
+
+  " Loop through denite options and enable them
+  function! s:profile(opts) abort
+    for l:fname in keys(a:opts)
+      for l:dopt in keys(a:opts[l:fname])
+        call denite#custom#option(l:fname, l:dopt, a:opts[l:fname][l:dopt])
+      endfor
+    endfor
+  endfunction
+catch
+  echo 'Denite not installed'
+endtry
+
+nnoremap <leader>ff :Ag<CR>
+nnoremap <leader>fo :History<CR>
+nnoremap <leader>fg :Rg<CR>
