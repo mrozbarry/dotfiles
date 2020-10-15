@@ -1,5 +1,7 @@
 Plug 'w0rp/ale'
 
+Plug 'sheerun/vim-polyglot'
+
 Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
 Plug 'mxw/vim-jsx', { 'for': 'javascript' }
 Plug 'posva/vim-vue', { 'for': 'javascript' }
