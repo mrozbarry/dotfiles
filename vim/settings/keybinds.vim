@@ -28,3 +28,5 @@ function! WinMove(key)
     exec "wincmd ".a:key
   endif
 endfunction
+
+nnoremap <Leader>sr :so $MYVIMRC<CR>
