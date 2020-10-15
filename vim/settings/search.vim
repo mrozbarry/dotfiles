@@ -41,6 +41,9 @@ catch
   echo 'Denite not installed'
 endtry
 
-nnoremap <leader>ff :Ag<CR>
-nnoremap <leader>fo :History<CR>
-nnoremap <leader>fg :Rg<CR>
+nnoremap <Leader>ff :Files<CR>
+nnoremap <Leader>fg :GFiles?<CR>
+nnoremap <Leader>fo :History<CR>
+nnoremap <Leader>fm :Maps<CR>
+nnoremap <Leader>fs :Snippets<CR>
+
