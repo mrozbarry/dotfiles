@@ -1,0 +1,31 @@
+snippet @test "PHPUnit Test Function"
+/** @test */
+public function it${1:TestsAThing}()
+{
+    ${2://}
+}
+endsnippet
+
+snippet pubf "public function ... {}"
+/** @test */
+public function ${1:tacos}(${2:})
+{
+    ${3://}
+}
+endsnippet
+
+snippet prif "private function ... {}"
+/** @test */
+public function ${1:burritos}(${2:})
+{
+    ${3://}
+}
+endsnippet
+
+snippet prof "protected function ... {}"
+/** @test */
+public function ${1:quesadilla}(${2:})
+{
+    ${3://}
+}
+endsnippet

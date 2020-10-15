@@ -1,10 +1,10 @@
-"if has('nvim')
-  "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-  "Plug 'roxma/nvim-yarp'
-  "Plug 'roxma/vim-hug-neovim-rpc'
-"else
-  "Plug 'Shougo/deoplete.nvim'
-"endif
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+else
+  Plug 'Shougo/deoplete.nvim'
+endif
 "Plug 'carlitux/deoplete-ternjs', {'for': 'javascript'}
 "Plug 'kristijanhusak/deoplete-phpactor', {'for': 'php'}
 
@@ -27,3 +27,5 @@
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'natebosch/vim-lsc'
 Plug 'natebosch/vim-lsc-dart'
+
+Plug 'SirVer/Ultisnips'
