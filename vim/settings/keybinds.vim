@@ -29,4 +29,4 @@ function! WinMove(key)
   endif
 endfunction
 
-nnoremap <Leader>sr :so $MYVIMRC<CR>
+nnoremap <Leader>sr :so $MYVIMRC<cr>
