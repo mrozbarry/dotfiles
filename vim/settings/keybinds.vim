@@ -2,19 +2,15 @@
 
 nnoremap <esc> :noh<return><esc>
 
-" fzf
-
-nnoremap <Leader>f :FZF<CR>
-
 " Tests
 
 nnoremap <Leader>tf :TestFile<return>
 
 "move to the split in the direction shown, or create a new split
-nnoremap <silent> <C-h> :call WinMove('h')<cr>
-nnoremap <silent> <C-j> :call WinMove('j')<cr>
-nnoremap <silent> <C-k> :call WinMove('k')<cr>
-nnoremap <silent> <C-l> :call WinMove('l')<cr>
+nnoremap <silent> <C-h> :w<cr> :call WinMove('h')<cr>
+nnoremap <silent> <C-j> :w<cr> :call WinMove('j')<cr>
+nnoremap <silent> <C-k> :w<cr> :call WinMove('k')<cr>
+nnoremap <silent> <C-l> :w<cr> :call WinMove('l')<cr>
 
 function! WinMove(key)
   let t:curwin = winnr()
@@ -29,4 +25,7 @@ function! WinMove(key)
   endif
 endfunction
 
-nnoremap <Leader>sr :so $MYVIMRC<cr>
+
+
+
+nnoremap <silent> <Leader>sr :so $MYVIMRC<cr>
