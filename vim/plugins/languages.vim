@@ -26,3 +26,5 @@ Plug 'StanAngeloff/php.vim', { 'for': 'php' }
 Plug 'stephpy/vim-php-cs-fixer', { 'for': 'php' }
 Plug 'phpactor/phpactor', { 'for': 'php', 'do': 'composer install' }
 Plug 'adoy/vim-php-refactoring-toolbox', { 'for': 'php' }
+
+Plug 'vim-scripts/Freebasic-vim-syntax-file'
