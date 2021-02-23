@@ -25,7 +25,11 @@ function! WinMove(key)
   endif
 endfunction
 
-
-
-
 nnoremap <silent> <Leader>sr :so $MYVIMRC<cr>
+
+nnoremap <Leader>ff :FZF<CR>
+nnoremap <Leader>fd :NERDTreeFind<CR>
+nnoremap <Leader>fg :GFiles?<CR>
+nnoremap <Leader>fo :History<CR>
+nnoremap <Leader>fm :Maps<CR>
+nnoremap <Leader>fs :Snippets<CR>
