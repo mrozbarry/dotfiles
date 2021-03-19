@@ -26,3 +26,27 @@ protected function ${1:quesadilla}(${2:})
     ${3://}
 }
 endsnippet
+
+snippet @controller "Laravel controller"
+<?php
+
+namespace App\Http\Controllers\${1};
+
+class ${2} {
+	${3:${VISUAL}}
+}
+endsnippet
+
+snippet __construct "Class constructor"
+public function __construct()
+{
+	${1}
+}
+endsnippet
+
+snippet __invoke "Class invokable method"
+public function __invoke()
+{
+	${1}
+}
+endsnippet

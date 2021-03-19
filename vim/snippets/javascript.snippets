@@ -6,8 +6,28 @@ test('${1}', (t) => {
 });
 endsnippet
 
-snippet @avaTest "Ava test"
+snippet @test "Ava test"
 test('${1}', (t) => {
   ${2:${VISUAL}}
+});
+endsnippet
+
+snippet @jest "Jest boilerplate"
+describe('${1}', () => {
+  it('${2}', () => {
+		expect(true).toBeTruthy();
+	});
+});
+endsnippet
+
+snippet @describe "Test describe block"
+describe('${1}', () => {
+  ${2:${VISUAL}}
+});
+endsnippet
+
+snippet @it "Test it block"
+it('${1}', () => {
+	expect(true).toBeTruthy();
 });
 endsnippet

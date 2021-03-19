@@ -1,3 +1,4 @@
+ZIM_HOME="$HOME/.zim"
 # Start configuration added by Zim install {{{
 #
 # User configuration sourced by interactive shells
@@ -6,7 +7,6 @@
 # -----------------
 # Zsh configuration
 # -----------------
-
 #
 # History
 #
