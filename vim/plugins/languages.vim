@@ -22,6 +22,7 @@ Plug 'digitaltoad/vim-pug'
 
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 
+Plug 'jwalton512/vim-blade'
 Plug 'StanAngeloff/php.vim', { 'for': 'php' }
 Plug 'stephpy/vim-php-cs-fixer', { 'for': 'php' }
 Plug 'phpactor/phpactor', { 'for': 'php', 'do': 'composer install' }
